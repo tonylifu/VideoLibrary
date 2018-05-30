@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="borderpane2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.school.controller.UserLoginController">
+   <padding>
+      <Insets top="5.0" />
+   </padding>
+   <bottom>
+      <GridPane blendMode="MULTIPLY" cacheHint="QUALITY" depthTest="ENABLE" hgap="5.0" prefHeight="800.0" prefWidth="1072.0" style="-fx-background-color: lightgreen;" vgap="5.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="50.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="523.0" minWidth="0.0" prefWidth="200.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="50.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="523.0" minWidth="10.0" prefWidth="244.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label id="idLbl2" style="-fx-font-size: 14;" textAlignment="CENTER" GridPane.rowIndex="1" />
+            <TextField id="id2" fx:id="idTF2" prefHeight="50.0" prefWidth="324.0" promptText="Enter your unique student ID" style="-fx-background-color: white;" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="H_RESIZE" />
+               </cursor>
+               <effect>
+                  <Glow />
+               </effect>
+            </TextField>
+            <Label contentDisplay="RIGHT" text="SurName" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font></Label>
+            <Label contentDisplay="RIGHT" text="Date of Birth" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font></Label>
+            <Label id="IDLbl2" contentDisplay="RIGHT" text="Identification No" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font></Label>
+            <Label contentDisplay="RIGHT" text="Other Names" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font></Label>
+            <Label contentDisplay="RIGHT" text="Nationality" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font></Label>
+            <Label contentDisplay="RIGHT" text="Place of Birth" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font></Label>
+            <Label contentDisplay="RIGHT" text="State/LGA" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font></Label>
+            <TextField id="surName2" fx:id="surNameTF2" promptText="SurName" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font></TextField>
+            <TextField id="otherNames2" fx:id="otherNamesTF2" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font></TextField>
+            <TextField id="placeOfBirth2" fx:id="placeOfBirthTF2" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font></TextField>
+            <TextField id="nationality2" fx:id="nationalityTF2" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font></TextField>
+            <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <children>
+                  <TextField id="state2" fx:id="stateTF2" promptText="State">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
+                  <TextField id="lga2" fx:id="lgaTF2" promptText="LGA">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
+                  <TextField id="village2" fx:id="villageTF2" promptText="Village">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
+               </children>
+            </FlowPane>
+            <Label id="addressLbl" contentDisplay="RIGHT" text="Address" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font></Label>
+            <Label contentDisplay="RIGHT" text="Mother" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font></Label>
+            <Label contentDisplay="RIGHT" text="Father" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font></Label>
+            <Label contentDisplay="RIGHT" text="Guardian" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font></Label>
+            <TextArea id="adress2" fx:id="addressTF2" prefHeight="200.0" prefWidth="200.0" promptText="Present Residential Address" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font size="18.0" />
+               </font></TextArea>
+            <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <children>
+                  <TextField id="fatherName2" fx:id="fatherNameTF2" promptText="Father's Name">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
+                  <TextField id="fatherPhone2" fx:id="fatherPhoneTF2" promptText="Father's Phone No">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
+                  <TextField id="fatherOccupation2" fx:id="fatherOccupationTF2" promptText="Father's Occupation">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
+                  <TextField id="fatherReligion2" fx:id="fatherReligionTF2" promptText="Father's Religion">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
+               </children>
+            </FlowPane>
+            <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <children>
+                  <TextField id="motherName2" fx:id="motherNameTF2" promptText="Mother's Name">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
+                  <TextField id="motherPhone2" fx:id="motherPhoneTF2" promptText="Mother's Phone No">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
+                  <TextField id="motherOccupation2" fx:id="motherOccupationTF2" promptText="Mother's Occupation">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
+                  <TextField id="motherReligion2" fx:id="motherReligionTF2" promptText="Mother's Religion">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
+               </children>
+            </FlowPane>
+            <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+               <children>
+                  <TextField id="guardianName2" fx:id="guardianNameTF2" promptText="Guardian's Name">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
+                  <TextField id="guardianPhone2" fx:id="guardianPhoneTF2" promptText="Guardian's Phone No">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
+                  <TextField id="guardianOccupation2" fx:id="guardianOccupationTF2" promptText="Guardian's Occupation">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
+                  <TextField id="guardianReligion2" fx:id="guardianReligionTF2" promptText="Guardian's Religion">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
+               </children>
+            </FlowPane>
+            <Label id="previousSchoolLbl" contentDisplay="RIGHT" text="Previous School" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font></Label>
+            <Label id="lastClassLbl" contentDisplay="RIGHT" text="Last Class" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font></Label>
+            <Label id="classSeekingLbl" contentDisplay="RIGHT" text="Class Seeking" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font></Label>
+            <Label id="classOfferedLbl" contentDisplay="RIGHT" text="Class Offered" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font></Label>
+            <TextField id="previousSchool2" fx:id="previousSchoolTF2" prefHeight="44.0" prefWidth="280.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font></TextField>
+            <TextField id="lastClass2" fx:id="lastClassTF2" GridPane.columnIndex="3" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font></TextField>
+            <TextField id="classSeeking2" fx:id="classSeekingTF2" prefHeight="45.0" prefWidth="295.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <font>
+                  <Font size="18.0" />
+               </font></TextField>
+            <TextField id="classOffered2" fx:id="classOfferedTF2" prefHeight="36.0" prefWidth="401.0" GridPane.columnIndex="3" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font></TextField>
+            <TextField id="ICE2" fx:id="ICETF2" promptText="Someone to contact in case of emergency" GridPane.columnIndex="1" GridPane.rowIndex="9">
+               <font>
+                  <Font size="18.0" />
+               </font></TextField>
+            <Label id="disabilityLbl" contentDisplay="RIGHT" text="Disabled?" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="8">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font></Label>
+            <Label id="ifDisabledLbl" contentDisplay="RIGHT" text="If Disabled (Give details)" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="8">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font></Label>
+            <Label id="ICELbl" contentDisplay="RIGHT" text="ICE" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="9">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font></Label>
+            <Label id="dateLbl" contentDisplay="RIGHT" text="Date" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="9">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font>
+            </Label>
+            <DatePicker id="dateOfReg2" fx:id="dateOfRegTF2" prefHeight="44.0" prefWidth="236.0" promptText="Select your date of registration" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+            <TextArea id="ifDisabled2" fx:id="ifDisabledTF2" prefHeight="200.0" prefWidth="200.0" promptText="Give details of disability to allow for proper provision of care or special needs" GridPane.columnIndex="3" GridPane.rowIndex="8">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font></TextArea>
+            <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <DatePicker id="dateOfBirth2" fx:id="dateOfBirthTF2" prefHeight="41.0" prefWidth="125.0" promptText="Select your Date of Birth" />
+                  <Label id="sexLbl" alignment="BOTTOM_RIGHT" prefHeight="27.0" prefWidth="51.0" text="Sex" textAlignment="RIGHT">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="sexTF2" editable="true" prefHeight="37.0" prefWidth="124.0" promptText="Female" />
+               </children>
+            </FlowPane>
+            <ToolBar prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="10">
+              <items>
+                <Button fx:id="returnUpdateButton" mnemonicParsing="false" onAction="#handleButtonAction2" prefHeight="32.0" prefWidth="66.0" text="Return" textFill="#240c4a">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#searchStudent" prefHeight="34.0" prefWidth="69.0" text="Find" textFill="#130875">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#updateStdButton" prefHeight="34.0" prefWidth="93.0" text="Update" textFill="#130875">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+              </items>
+            </ToolBar>
+            <ComboBox fx:id="disabilityTF2" editable="true" prefHeight="33.0" prefWidth="135.0" promptText="No" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+         </children>
+         <effect>
+            <Lighting light="$null">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <opaqueInsets>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </bottom>
+</BorderPane>

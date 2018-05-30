@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.school.controller.UserLoginController">
+   <center>
+      <TitledPane alignment="TOP_CENTER" animated="false" prefHeight="520.0" prefWidth="507.0" text="School Record Management System" textFill="#104337" BorderPane.alignment="CENTER">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="320.0" prefWidth="200.0" style="-fx-background-color: white;">
+               <children>
+                  <ToolBar layoutX="14.0" layoutY="75.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: indigo;">
+                    <items>
+                      <Button fx:id="enterScoreSheetsButton" mnemonicParsing="false" onAction="#handleButtonAction4" prefHeight="27.0" prefWidth="182.0" style="-fx-background-color: white;" text="Enter/Delete Scores " textFill="#0f0c4d">
+                           <effect>
+                              <DropShadow>
+                                 <input>
+                                    <InnerShadow />
+                                 </input>
+                              </DropShadow>
+                           </effect>
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                    </items>
+                  </ToolBar>
+                  <ToolBar layoutX="14.0" layoutY="165.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: indigo;">
+                    <items>
+                      <Button fx:id="addDeleteSubjectsButton" mnemonicParsing="false" onAction="#handleButtonAction5" prefHeight="27.0" prefWidth="182.0" style="-fx-background-color: white;" text="Add/Delete Subjects" textFill="#0f0c4d">
+                           <effect>
+                              <DropShadow>
+                                 <input>
+                                    <InnerShadow />
+                                 </input>
+                              </DropShadow>
+                           </effect>
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                    </items>
+                  </ToolBar>
+                  <ToolBar layoutX="278.0" layoutY="75.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: indigo;">
+                    <items>
+                      <Button fx:id="createNewStudentButton" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="182.0" style="-fx-background-color: white;" text="Create New Student" textAlignment="CENTER" textFill="#0f0c4d">
+                           <effect>
+                              <DropShadow>
+                                 <input>
+                                    <InnerShadow />
+                                 </input>
+                              </DropShadow>
+                           </effect>
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                    </items>
+                  </ToolBar>
+                  <ToolBar layoutX="278.0" layoutY="165.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: indigo;">
+                    <items>
+                      <Button fx:id="findStudentButton" mnemonicParsing="false" onAction="#handleButtonAction2" prefHeight="27.0" prefWidth="182.0" style="-fx-background-color: white;" text="Read/Find Student" textFill="#0f0c4d">
+                           <effect>
+                              <DropShadow>
+                                 <input>
+                                    <InnerShadow />
+                                 </input>
+                              </DropShadow>
+                           </effect>
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                    </items>
+                  </ToolBar>
+                  <ToolBar layoutX="278.0" layoutY="262.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: indigo;">
+                    <items>
+                      <Button fx:id="updateStudentButton" mnemonicParsing="false" onAction="#handleButtonAction2" prefHeight="27.0" prefWidth="182.0" style="-fx-background-color: white;" text="Update/Correct Student" textFill="#0f0c4d">
+                           <effect>
+                              <DropShadow>
+                                 <input>
+                                    <InnerShadow />
+                                 </input>
+                              </DropShadow>
+                           </effect>
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                    </items>
+                  </ToolBar>
+                  <ToolBar layoutX="278.0" layoutY="353.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: indigo;">
+                    <items>
+                      <Button fx:id="deleteStudentButton" mnemonicParsing="false" onAction="#handleButtonAction3" prefHeight="27.0" prefWidth="182.0" style="-fx-background-color: white;" text="Delete Student" textFill="#0f0c4d">
+                           <effect>
+                              <DropShadow>
+                                 <input>
+                                    <InnerShadow />
+                                 </input>
+                              </DropShadow>
+                           </effect>
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                    </items>
+                  </ToolBar>
+                  <ToolBar layoutX="14.0" layoutY="262.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: indigo;">
+                    <items>
+                      <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="182.0" style="-fx-background-color: white;" text="Generate Result*" textFill="#0f0c4d">
+                           <effect>
+                              <DropShadow>
+                                 <input>
+                                    <InnerShadow />
+                                 </input>
+                              </DropShadow>
+                           </effect>
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                    </items>
+                  </ToolBar>
+                  <ToolBar layoutX="26.0" layoutY="363.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: indigo;">
+                    <items>
+                      <Button fx:id="changePwdButton" mnemonicParsing="false" onAction="#handleButtonAction7" prefHeight="27.0" prefWidth="182.0" style="-fx-background-color: white;" text="Change Password" textFill="#0f0c4d">
+                           <effect>
+                              <DropShadow>
+                                 <input>
+                                    <InnerShadow />
+                                 </input>
+                              </DropShadow>
+                           </effect>
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                    </items>
+                  </ToolBar>
+                  <ToolBar layoutX="153.0" layoutY="426.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: indigo;">
+                    <items>
+                      <Button fx:id="logOffHomeButton" mnemonicParsing="false" onAction="#quitPlatformButton" prefHeight="27.0" prefWidth="182.0" style="-fx-background-color: white;" text="Logout" textFill="#0f0c4d">
+                           <effect>
+                              <DropShadow>
+                                 <input>
+                                    <InnerShadow />
+                                 </input>
+                              </DropShadow>
+                           </effect>
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="18.0" />
+                           </font>
+                        </Button>
+                    </items>
+                  </ToolBar>
+                  <TextField fx:id="msgLabel" editable="false" layoutX="214.0" layoutY="14.0" opacity="0.25" prefHeight="27.0" prefWidth="282.0">
+                     <effect>
+                        <DropShadow />
+                     </effect></TextField>
+                  <Button layoutX="114.0" layoutY="13.0" mnemonicParsing="false" onAction="#displayLoginUser" opacity="0.25" prefHeight="28.0" prefWidth="97.0" text="Who is login?" textFill="#4a3b3b" />
+               </children>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </AnchorPane>
+        </content>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TitledPane>
+   </center>
+</BorderPane>
