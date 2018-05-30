@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="video.repository.controller.OmniLoginControl">
+   <children>
+      <TableView fx:id="uploadsDataTable" prefHeight="226.0" prefWidth="800.0">
+        <columns>
+          <TableColumn fx:id="vidCol" prefWidth="146.0" text="VID" />
+          <TableColumn fx:id="titleCol" prefWidth="206.0" text="Tilte" />
+            <TableColumn fx:id="genreCol" prefWidth="84.0" text="Genre" />
+            <TableColumn fx:id="fileCol" prefWidth="104.0" text="File" />
+            <TableColumn fx:id="locationCol" prefWidth="172.0" text="File Location" />
+            <TableColumn fx:id="userCol" prefWidth="87.0" text="User" />
+        </columns>
+      </TableView>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <ComboBox fx:id="uploadVidCombo" onMouseEntered="#initVidUploadsCombo" prefHeight="40.0" prefWidth="242.0" promptText="select VID" />
+            <TextArea fx:id="uploadedVidLocation" prefHeight="200.0" prefWidth="200.0" promptText="file location" style="-fx-background-color: aliceblue;" wrapText="true" />
+            <ToolBar prefHeight="40.0" prefWidth="166.0">
+              <items>
+                <Button mnemonicParsing="false" onAction="#playMediaButton" text="Play" textFill="#27b249">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Button>
+                  <Button fx:id="uploadVidPauseBtn" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" text="Pause" textFill="#351375">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Button>
+                  <Button fx:id="uploadVidStopBtn" layoutX="52.0" layoutY="13.0" mnemonicParsing="false" text="Stop" textFill="#b03e27">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Button>
+              </items>
+            </ToolBar>
+            <Button mnemonicParsing="false" onAction="#RefrestUploadsTableButton" prefHeight="60.0" prefWidth="115.0" text="Refresh Table">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="30.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <HBox prefHeight="371.0" prefWidth="800.0" style="-fx-background-color: black;">
+         <children>
+            <MediaView id="MEDIA_VIEW_ID" fx:id="mediaView" fitHeight="350.0" fitWidth="420.0" preserveRatio="false" />
+            <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="320.0">
+              <items>
+                <Button mnemonicParsing="false" onAction="#authorizeVideoButton" prefHeight="30.0" prefWidth="100.0" text="Authorize" textFill="#1a5b12">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="13.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Decline" textFill="#0a061e">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="returnEnterAuthorizeBtn" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleButtonAction4" prefHeight="30.0" prefWidth="100.0" text="Cancel" textFill="#9e3421">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+              </items>
+               <HBox.margin>
+                  <Insets left="50.0" top="250.0" />
+               </HBox.margin>
+            </ToolBar>
+         </children>
+      </HBox>
+   </children>
+</VBox>

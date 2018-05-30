@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
@@ -7,63 +11,117 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.school.controller.UserLoginController">
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="video.repository.controller.OmniLoginControl">
    <top>
-      <GridPane prefHeight="455.0" prefWidth="505.0" BorderPane.alignment="CENTER">
+      <GridPane gridLinesVisible="true" prefHeight="455.0" prefWidth="505.0" BorderPane.alignment="CENTER">
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="244.0" minWidth="10.0" prefWidth="81.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="432.0" minWidth="10.0" prefWidth="424.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="244.0" minWidth="10.0" prefWidth="91.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="432.0" minWidth="10.0" prefWidth="414.0" />
         </columnConstraints>
         <rowConstraints>
             <RowConstraints maxHeight="147.0" minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="147.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="147.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="233.0" minHeight="10.0" prefHeight="66.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="343.0" minHeight="10.0" prefHeight="230.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="343.0" minHeight="10.0" prefHeight="230.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="124.0" text="Password" GridPane.rowIndex="2">
+            <ImageView fitHeight="291.0" fitWidth="415.0" pickOnBounds="true" preserveRatio="true" style="-: ;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@wst1.jpg" />
+               </image>
+               <effect>
+                  <Reflection />
+               </effect>
+            </ImageView>
+            <Label alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="124.0" text="Password  " GridPane.rowIndex="3">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="124.0" text="User Name" GridPane.rowIndex="1">
+            <Label alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="124.0" text="User Name  " GridPane.rowIndex="1">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
             </Label>
-            <PasswordField fx:id="passwordLogin_TF" prefHeight="47.0" prefWidth="382.0" style="-fx-background-color: lightgray;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            
+            <TextField fx:id="userNameLogin_TF" prefHeight="43.0" prefWidth="382.0" style="-fx-background-color: aliceblue;" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <opaqueInsets>
                   <Insets bottom="5.0" left="5.0" right="20.0" top="5.0" />
                </opaqueInsets>
                <font>
                   <Font size="18.0" />
-               </font></PasswordField>
-            <TextField fx:id="userNameLogin_TF" prefHeight="43.0" prefWidth="382.0" style="-fx-background-color: lightgray;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" right="30.0" />
+               </GridPane.margin>
+               </TextField>
+            
+            <PasswordField fx:id="passwordLogin_TF" prefHeight="47.0" prefWidth="382.0" style="-fx-background-color: aliceblue;" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <opaqueInsets>
                   <Insets bottom="5.0" left="5.0" right="20.0" top="5.0" />
                </opaqueInsets>
                <font>
                   <Font size="18.0" />
-               </font></TextField>
-            <ToolBar prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" right="30.0" />
+               </GridPane.margin>
+               </PasswordField>
+               
+            <ToolBar opacity="0.95" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: aliceblue;" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.valignment="TOP">
               <items>
-                <Button mnemonicParsing="false" onAction="#quitPlatformButton2" prefHeight="41.0" prefWidth="108.0" text="Quit" textFill="#153618">
+                <Button focusTraversable="false" mnemonicParsing="true" onAction="#quitPlatformButton2" prefHeight="41.0" prefWidth="77.0" text="_Quit" textFill="#940808">
                      <font>
                         <Font name="System Bold Italic" size="14.0" />
                      </font>
                   </Button>
-                  <Button fx:id="adminButton" mnemonicParsing="false" onAction="#handleButtonAction6" prefHeight="41.0" prefWidth="108.0" text="Login Admin" textFill="#153618">
+                  <Button fx:id="adminButton" focusTraversable="false" mnemonicParsing="true" onAction="#handleButtonAction6" prefHeight="41.0" prefWidth="108.0" text="Login _Admin" textFill="#153618">
                      <font>
                         <Font name="System Bold Italic" size="14.0" />
                      </font>
                   </Button>
-                  <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#loginButton" prefHeight="41.0" prefWidth="108.0" text="Login" textFill="#153618">
+                  <Button fx:id="loginBtn" focusTraversable="false" mnemonicParsing="true" onAction="#loginButton" prefHeight="41.0" prefWidth="108.0" text="_Login" textFill="#153618">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="newUserBtn" focusTraversable="false" mnemonicParsing="true" onAction="#handleButtonAction6" prefHeight="41.0" prefWidth="90.0" text="New User" textFill="#1c9139">
                      <font>
                         <Font name="System Bold Italic" size="14.0" />
                      </font>
                   </Button>
               </items>
             </ToolBar>
+            <ImageView fitHeight="73.0" fitWidth="411.0" pickOnBounds="true" GridPane.columnIndex="1">
+               <image>
+                  <Image url="@surf.jpg" />
+               </image>
+            </ImageView>
+            <MenuBar opacity="0.5" GridPane.columnIndex="1">
+              <menus>
+                <Menu mnemonicParsing="true" text="_File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#exitMenuItemClick" text="Exit" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="true" text="_Help">
+                  <items>
+                    <MenuItem fx:id="aboutMenuItemClick" mnemonicParsing="false" onAction="#handleAboutMenuItemClick" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Button fx:id="aboutMenuItemClick2" mnemonicParsing="false" onAction="#handleAboutMenuItemClick" text="aboutMenuItemClick2" visible="false" GridPane.rowIndex="4" />
+            <AmbientLight color="CHARTREUSE" lightOn="true" />
+            <ImageView fitHeight="82.0" fitWidth="89.0" pickOnBounds="true">
+               <image>
+                  <Image url="@doc.jpg" />
+               </image>
+            </ImageView>
          </children>
       </GridPane>
    </top>

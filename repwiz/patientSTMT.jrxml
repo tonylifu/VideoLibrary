@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="stmTest2" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bc237264-6056-4ae4-ba92-2a14843f2ded">
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[YFRyYW5zYWN0aW9uc2AgLDE1LDE1LDFlYzY0ZGY3LTkzMDUtNDQ0MC05ODI5LWU3ZDZkYmUzMzk5
+Mzs=]]>
+	</property>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="repwiz\DataAdapter.xml"/>
+	<parameter name="cardNo2" class="java.lang.String">
+		<defaultValueExpression><![CDATA["001/18"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[SELECT *
+FROM `Transactions`
+WHERE 
+	 `Transactions`.`CARDNO` = $P{cardNo2}]]>
+	</queryString>
+	<field name="TXNDATE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="TXNDATE"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="transactions"/>
+	</field>
+	<field name="DEPWITHDRAWAL" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DEPWITHDRAWAL"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="transactions"/>
+	</field>
+	<field name="ACCOUNTNAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="ACCOUNTNAME"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="transactions"/>
+	</field>
+	<field name="CREDITS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CREDITS"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="transactions"/>
+	</field>
+	<field name="DEBITS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DEBITS"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="transactions"/>
+	</field>
+	<field name="AVAILABLEBALANCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="AVAILABLEBALANCE"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="transactions"/>
+	</field>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="110">
+			<textField>
+				<reportElement x="0" y="77" width="160" height="30" uuid="25cc4ac8-3570-489e-8f11-213dfe487cbb"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{cardNo2}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="310" y="77" width="245" height="30" uuid="131d5683-2c43-416a-a918-96f3b53c7256">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ab3d9aca-a667-476e-84c8-aff953f9407c"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ACCOUNTNAME}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="160" y="77" width="140" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="2e87e21c-9912-478e-9f45-335354907d4a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ab3d9aca-a667-476e-84c8-aff953f9407c"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ACCOUNT NAME]]></text>
+			</staticText>
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#B89735" uuid="f485da17-5a9f-4465-8736-2e0e3c44b8aa"/>
+				<staticText>
+					<reportElement x="70" y="20" width="330" height="43" forecolor="#FFFFFF" uuid="c26c5c9f-87fb-4488-90b3-f83ed62a4995"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Santa Maria Clinics]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="420" y="43" width="155" height="20" forecolor="#FFFFFF" uuid="77dd28a4-5fe0-43df-b05d-e73350de1908"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Financial Record]]></text>
+				</staticText>
+				<image>
+					<reportElement x="20" y="16" width="40" height="50" uuid="a229e0de-d4c0-41ef-a7b4-b009481eee82"/>
+					<imageExpression><![CDATA["C:/eclipseJEEM7/eclipse-workspace/HMS_SantaMaria/src/hms/hospital/santamaria/controller/doc.jpg"]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="70" y="62" width="330" height="26" forecolor="#FFFFFF" uuid="d6e6c361-09f4-44ef-8dc7-c14013423ee2"/>
+					<textElement>
+						<font fontName="Lucida Calligraphy" size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Abakpa - Ogoja, Cross River State]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="6e9504f9-5302-476f-8c20-c441f50e2408"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="a16e2a1c-a113-478c-bbf8-45d633445033">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="37731fb1-d4f5-46eb-b49d-d7c9021de0a5"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="111" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="2e87e21c-9912-478e-9f45-335354907d4a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ab3d9aca-a667-476e-84c8-aff953f9407c"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DESCRIPTION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="222" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="74e82f5e-e774-4d76-9417-5133fa4a9853">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f43bc34b-b1d0-4d14-990f-a3a8d6853e86"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CREDITS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="333" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="bef0625c-a4c5-47d9-b1b6-6764db42af9b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f85b70c0-160f-4641-bc54-2dc9e4361937"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEBITS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="444" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="15a0274d-a8b8-410e-8e4e-5e4cd0a2a977">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="49efb012-f631-4214-b1da-21059fc4ff53"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BALANCE]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="1a5bb38f-8a2e-4fb4-b5e2-97a23debe8e8"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="111" height="20" uuid="65a7322c-387f-46ea-a989-4d42de998958">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="37731fb1-d4f5-46eb-b49d-d7c9021de0a5"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TXNDATE}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="111" y="0" width="111" height="20" uuid="131d5683-2c43-416a-a918-96f3b53c7256">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ab3d9aca-a667-476e-84c8-aff953f9407c"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DEPWITHDRAWAL}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="230" y="0" width="103" height="20" uuid="6e1f1903-2366-435d-b387-a503a1c4e4cd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f43bc34b-b1d0-4d14-990f-a3a8d6853e86"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CREDITS}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="333" y="0" width="111" height="20" uuid="851faa66-31f2-4c3f-9a8a-4560ba615222">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f85b70c0-160f-4641-bc54-2dc9e4361937"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DEBITS}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="444" y="0" width="111" height="20" uuid="db60750a-f03a-4f95-af26-8d672d6a97a4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="49efb012-f631-4214-b1da-21059fc4ff53"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{AVAILABLEBALANCE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="6679a32c-e8a8-4c94-9f07-5ae445d152e9"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="dfdeadec-a024-4e5f-8968-8af531fa4e7e"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="0a44ad01-8138-452c-824c-cd80d6bc3e8f"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

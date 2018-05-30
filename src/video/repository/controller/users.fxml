@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.school.controller.UserLoginController">
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="video.repository.controller.OmniLoginControl">
    <center>
-      <GridPane prefHeight="539.0" prefWidth="570.0" BorderPane.alignment="CENTER">
+      <GridPane gridLinesVisible="true" onMouseMoved="#initializeUsersNameText" prefHeight="539.0" prefWidth="570.0" style="-fx-background-color: aliceblue;" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="279.0" minWidth="10.0" prefWidth="138.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="432.0" minWidth="10.0" prefWidth="432.0" />
@@ -16,91 +17,133 @@
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="135.0" text="Password" GridPane.rowIndex="1">
+            <Label alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="135.0" text="Password" textFill="#170443" GridPane.rowIndex="1">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="135.0" text="Name" GridPane.rowIndex="2">
+            <Label alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="135.0" text="Name" textFill="#170443" GridPane.rowIndex="3">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="135.0" text="User Class" GridPane.rowIndex="3">
+            <Label alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="135.0" text="User Class" textFill="#170443" GridPane.rowIndex="4">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="135.0" text="Department" GridPane.rowIndex="4">
+            <Label alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="135.0" text="Department" textFill="#170443" GridPane.rowIndex="5">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="135.0" text="User Name">
+            <Label alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="135.0" text="User Name" textFill="#170443">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <PasswordField fx:id="password_TextField" prefHeight="58.0" prefWidth="432.0" promptText="password" style="-fx-background-color: skyblue;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            
+            <TextField fx:id="userName_TextField" prefHeight="60.0" prefWidth="397.0" promptText="UserName" style="-fx-background-color: lightgreen;" GridPane.columnIndex="1">
                <font>
                   <Font name="Times New Roman" size="18.0" />
                </font>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="25.0" top="5.0" />
+               </GridPane.margin>
+            </TextField>
+            
+            <PasswordField fx:id="password_TextField" prefHeight="58.0" prefWidth="432.0" promptText="password" style="-fx-background-color: lightgreen;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="25.0" top="5.0" />
+               </GridPane.margin>
             </PasswordField>
-            <TextField fx:id="name_TextField" prefHeight="60.0" prefWidth="432.0" style="-fx-background-color: skyblue;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            
+            <TextField fx:id="userStaffID" prefHeight="60.0" prefWidth="432.0" promptText="EmpNo" style="-fx-background-color: lightgreen;" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
                   <Font name="Times New Roman" size="18.0" />
                </font>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="200.0" top="5.0" />
+               </GridPane.margin>
             </TextField>
-            <TextField fx:id="userName_TextField" prefHeight="60.0" prefWidth="397.0" style="-fx-background-color: skyblue;" GridPane.columnIndex="1">
+            
+            <TextField fx:id="name_TextField" editable="false" focusTraversable="false" prefHeight="60.0" prefWidth="432.0" style="-fx-background-color: lightgray;" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font name="Times New Roman" size="18.0" />
                </font>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="25.0" top="5.0" />
+               </GridPane.margin>
             </TextField>
-            <TextField fx:id="userClass_TextField" prefHeight="60.0" prefWidth="432.0" style="-fx-background-color: skyblue;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            
+            <ComboBox fx:id="userClass_TextField" editable="true" onMouseEntered="#initialize9" prefHeight="64.0" prefWidth="318.0" promptText="select option" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="150.0" top="5.0" />
+               </GridPane.margin>
+            </ComboBox>
+            
+            <TextField fx:id="dept_TextField" prefHeight="60.0" prefWidth="432.0" promptText="Dept or Unit" style="-fx-background-color: lightgreen;" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <font>
                   <Font name="Times New Roman" size="18.0" />
                </font>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="25.0" top="5.0" />
+               </GridPane.margin>
             </TextField>
-            <TextField fx:id="dept_TextField" prefHeight="60.0" prefWidth="432.0" style="-fx-background-color: skyblue;" GridPane.columnIndex="1" GridPane.rowIndex="4">
-               <font>
-                  <Font name="Times New Roman" size="18.0" />
-               </font>
-            </TextField>
-            <ToolBar prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <ToolBar prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
               <items>
                   <Button mnemonicParsing="false" onAction="#verifyuserNameButton" prefHeight="44.0" prefWidth="95.0" text="VerifyUser" textFill="#401616">
                      <font>
                         <Font name="System Bold Italic" size="14.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#deleteUserNameButton" prefHeight="44.0" prefWidth="95.0" text="Delete" textFill="#401616">
+                  <Button mnemonicParsing="false" onAction="#deleteUserNameButton" prefHeight="44.0" prefWidth="69.0" text="Delete" textFill="#401616">
                      <font>
                         <Font name="System Bold Italic" size="14.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#resetUserButton" prefHeight="44.0" prefWidth="95.0" text="Reset" textFill="#401616">
+                  <Button mnemonicParsing="false" onAction="#resetUserButton" prefHeight="44.0" prefWidth="67.0" text="Reset" textFill="#401616">
                      <font>
                         <Font name="System Bold Italic" size="14.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#createUserButton" prefHeight="45.0" prefWidth="121.0" text="Save" textFill="#401616">
+                  <Button mnemonicParsing="false" onAction="#updateUserButton" prefHeight="45.0" prefWidth="73.0" text="Update" textFill="#401616">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#createUserButton" prefHeight="45.0" prefWidth="73.0" text="Save" textFill="#401616">
                      <font>
                         <Font name="System Bold Italic" size="14.0" />
                      </font>
                   </Button>
               </items>
             </ToolBar>
-          <Button fx:id="logoutAdminButton" mnemonicParsing="false" onAction="#handleButtonAction6" prefHeight="44.0" prefWidth="95.0" text="Logout" textFill="#401616" GridPane.rowIndex="5">
+          <Button fx:id="logoutAdminButton" mnemonicParsing="false" onAction="#handleButtonAction6" prefHeight="44.0" prefWidth="95.0" text="Logout" textFill="#6b0404" GridPane.rowIndex="6">
                <font>
                   <Font name="System Bold Italic" size="14.0" />
                </font>
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
             </Button>
+            
+            <Label alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="135.0" text="Staff ID" textFill="#170443" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            
          </children>
       </GridPane>
    </center>

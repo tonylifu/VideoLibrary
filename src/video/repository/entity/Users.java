@@ -1,4 +1,4 @@
-package com.school.entity;
+package video.repository.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -7,12 +7,13 @@ import javax.persistence.Id;
 public class Users {
 	@Id
 	private String userName;
-	private String name, password, userClass, dept;
+	private String userStaffID, name, password, userClass, dept;
 	
-	public Users(String userName, String name, String password, String userClass, 
+	public Users(String userName, String userStaffID, String name, String password, String userClass, 
 			String dept) {
 		super();
 		this.userName = userName;
+		this.userStaffID = userStaffID;
 		this.name = name;
 		this.password = password;
 		this.userClass = userClass;
@@ -22,6 +23,12 @@ public class Users {
 		super();
 	}
 	
+	public String getUserStaffID() {
+		return userStaffID;
+	}
+	public void setUserStaffID(String userStaffID) {
+		this.userStaffID = userStaffID;
+	}
 	public String getName() {
 		return name;
 	}

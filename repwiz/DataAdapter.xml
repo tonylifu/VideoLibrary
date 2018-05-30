@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jdbcDataAdapter class="net.sf.jasperreports.data.jdbc.JdbcDataAdapterImpl"><name>New Data Adapter 1</name><driver>com.mysql.jdbc.Driver</driver><username>netuser</username><password>netuser</password><savePassword>true</savePassword><url>jdbc:mysql://130.100.100.2/hmssantamariadb</url><database></database><serverAddress></serverAddress><classpath>C:\mysql-connector-java-5.1.44\mysql-connector-java-5.1.44\mysql-connector-java-5.1.44-bin.jar</classpath></jdbcDataAdapter>

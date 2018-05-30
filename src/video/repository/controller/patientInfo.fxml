@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="borderpane2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="video.repository.controller.OmniLoginControl">
+   <padding>
+      <Insets top="5.0" />
+   </padding>
+   <center>
+      <GridPane blendMode="MULTIPLY" cacheHint="QUALITY" depthTest="ENABLE" hgap="5.0" prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: aliceblue;" vgap="5.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="50.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="523.0" minWidth="0.0" prefWidth="200.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="50.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="523.0" minWidth="10.0" prefWidth="244.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label id="idLbl2" style="-fx-font-size: 14;" textAlignment="CENTER" GridPane.rowIndex="1" />
+            <TextField id="id2" fx:id="patientCardNo" promptText="Id No" style="-fx-background-color: lightblue;" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="H_RESIZE" />
+               </cursor>
+               <effect>
+                  <Glow />
+               </effect>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label contentDisplay="RIGHT" text="SurName" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font></Label>
+            <Label contentDisplay="RIGHT" text="Date of Birth" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font></Label>
+            <Label id="IDLbl2" contentDisplay="RIGHT" text="ID No" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font></Label>
+            <Label contentDisplay="RIGHT" text="Other Names" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font></Label>
+            <Label contentDisplay="RIGHT" text="Nationality" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font></Label>
+            <TextField id="surName2" fx:id="patientSurName" promptText="SurName" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin></TextField>
+            <TextField id="otherNames2" fx:id="patientOtherNames" promptText="other names" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin></TextField>
+            <TextField id="nationality2" fx:id="patientNationality" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin></TextField>
+            <Label id="addressLbl" contentDisplay="RIGHT" text="Address" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font></Label>
+            <TextArea id="adress2" fx:id="patientAddress" prefHeight="200.0" prefWidth="200.0" promptText="Present Residential Address" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin></TextArea>
+            <Label id="previousSchoolLbl" contentDisplay="RIGHT" text="Email" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font></Label>
+            <Label id="lastClassLbl" contentDisplay="RIGHT" text="Phone" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font></Label>
+            <TextField id="previousSchool2" fx:id="patientEmail" promptText="Email Address" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin></TextField>
+            <TextField id="ICE2" fx:id="patientNextOfKinName" promptText="next of kin's name" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin></TextField>
+            <Label id="ICELbl" contentDisplay="RIGHT" text="Next of Kin" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font></Label>
+            <Label id="dateLbl" contentDisplay="RIGHT" text="Date" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font>
+            </Label>
+            <DatePicker id="dateOfReg2" fx:id="patientDor" prefHeight="44.0" prefWidth="170.0" promptText="Select your date of registration" GridPane.columnIndex="3" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></DatePicker>
+            <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <DatePicker id="dateOfBirth2" fx:id="patientDob" prefHeight="41.0" prefWidth="112.0" promptText="Select your Date of Birth" />
+                  <Label id="sexLbl" alignment="BOTTOM_RIGHT" prefHeight="27.0" prefWidth="51.0" text="Sex" textAlignment="RIGHT">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="patientSex" onMouseEntered="#patientCombo" prefHeight="37.0" prefWidth="113.0" promptText="select option" />
+               </children>
+            </FlowPane>
+            <ToolBar prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="8">
+              <items>
+                  <Button mnemonicParsing="false" onAction="#deletePatientButton" prefHeight="34.0" prefWidth="65.0" text="Delete" textFill="#130875">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#findPatientButton" prefHeight="34.0" prefWidth="60.0" text="Find" textFill="#130875">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#updatePatientButton" prefHeight="34.0" prefWidth="71.0" text="Update" textFill="#130875">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#savePatientsButton" prefHeight="34.0" prefWidth="70.0" text="Save" textFill="#130875">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+              </items>
+            </ToolBar>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+               <children>
+                  <TextField id="lastClass2" fx:id="patientPhone1" promptText="Mobile No 1">
+                     <font>
+                        <Font name="Times New Roman" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField id="lastClass2" fx:id="patientPhone2" promptText="Mobile No 2">
+                     <font>
+                        <Font name="Times New Roman" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="16.0" prefWidth="73.0" text="Marital Status" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="patientMaritalStatus" onMouseEntered="#patientCombo" prefHeight="37.0" prefWidth="159.0" promptText="select option" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </ComboBox>
+          <Button fx:id="returnPatientInfoBtn" mnemonicParsing="false" onAction="#handleButtonAction9" prefHeight="32.0" prefWidth="66.0" text="Return" textFill="#240c4a" GridPane.columnIndex="2" GridPane.rowIndex="8">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label id="ICELbl" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="16.0" prefWidth="104.0" text="Next of Kin's Add" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label id="ICELbl" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="25.0" prefWidth="112.0" text="Next of Kin's Phone" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField id="ICE2" fx:id="patientNextOfKinAdd" promptText="next of kin's address" GridPane.columnIndex="3" GridPane.rowIndex="6">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField id="ICE2" fx:id="patientNextOfKinPhone" promptText="next of kin's phone number" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField id="previousSchool2" fx:id="patientState" promptText="state of origin" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <children>
+                  <TextField id="lastClass2" fx:id="patientLga" promptText="LGA">
+                     <font>
+                        <Font name="Times New Roman" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField id="lastClass2" fx:id="patientVillage" promptText="village">
+                     <font>
+                        <Font name="Times New Roman" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <Label contentDisplay="RIGHT" text="State of Origin" textFill="#120346" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="RIGHT" text="LGA/Village" textFill="#120346" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Arial Narrow Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <Lighting light="$null">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <opaqueInsets>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </center>
+</BorderPane>

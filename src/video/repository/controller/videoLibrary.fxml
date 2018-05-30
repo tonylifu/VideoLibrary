@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="video.repository.controller.OmniLoginControl">
+   <children>
+      <TableView fx:id="videoLibDataTable" prefHeight="226.0" prefWidth="800.0">
+        <columns>
+          <TableColumn fx:id="vidCol2" prefWidth="146.0" text="VID" />
+          <TableColumn fx:id="titleCol2" prefWidth="206.0" text="Tilte" />
+            <TableColumn fx:id="genreCol2" prefWidth="84.0" text="Genre" />
+            <TableColumn fx:id="fileCol2" prefWidth="104.0" text="File" />
+            <TableColumn fx:id="locationCol2" prefWidth="172.0" text="File Location" />
+            <TableColumn fx:id="userCol2" prefWidth="87.0" text="User" />
+        </columns>
+      </TableView>
+      <HBox prefHeight="60.0" prefWidth="800.0">
+         <children>
+            <ComboBox fx:id="uploadVidCombo2" onMouseEntered="#initVidUploadsCombo2" prefHeight="40.0" prefWidth="242.0" promptText="select VID" />
+            <TextArea fx:id="uploadedVidLocation2" prefHeight="200.0" prefWidth="200.0" promptText="file location" style="-fx-background-color: aliceblue;" wrapText="true" />
+            <ToolBar prefHeight="40.0" prefWidth="166.0">
+              <items>
+                <Button mnemonicParsing="false" onAction="#playMediaButton2" text="Play" textFill="#27b249">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Button>
+                  <Button fx:id="uploadVidPauseBtn2" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" text="Pause" textFill="#351375">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Button>
+                  <Button fx:id="uploadVidStopBtn2" layoutX="52.0" layoutY="13.0" mnemonicParsing="false" text="Stop" textFill="#b03e27">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Button>
+              </items>
+            </ToolBar>
+            <Button mnemonicParsing="false" onAction="#RefrestAuthorizedTableButton" prefHeight="23.0" prefWidth="115.0" text="Refresh Table" textFill="#5c7c4a">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="30.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <HBox prefHeight="413.0" prefWidth="800.0" style="-fx-background-color: black;">
+         <children>
+            <MediaView id="MEDIA_VIEW_ID" fx:id="mediaView" fitHeight="400.0" fitWidth="630.0" preserveRatio="false" />
+            <Slider fx:id="progressSlider" blockIncrement="1.0" orientation="VERTICAL" showTickLabels="true" showTickMarks="true" />
+            <Button fx:id="returnEnterVidLibBtn" mnemonicParsing="false" onAction="#handleButtonAction3" prefHeight="30.0" prefWidth="100.0" text="Return" textFill="#0d0a32">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="370.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -1,4 +1,4 @@
-package com.school.services;
+package video.repository.services;
 
 public class ChangePassword {
 

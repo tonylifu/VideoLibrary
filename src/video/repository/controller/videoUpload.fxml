@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane hgap="14.0" maxHeight="+Infinity" maxWidth="+Infinity" minHeight="-Infinity" minWidth="-Infinity" vgap="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="video.repository.controller.OmniLoginControl">
+  <children>
+    <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="TOP">
+      <image>
+        <!-- place holder -->
+      </image>
+    </ImageView>
+    <VBox maxHeight="+Infinity" maxWidth="+Infinity" minHeight="-Infinity" prefWidth="400.0" spacing="7.0" GridPane.columnIndex="1">
+      <children>
+        <Label fx:id="messageLabel" text="Video Upload" textAlignment="LEFT" wrapText="true">
+          <font>
+            <Font name="System Bold" size="13.0" />
+          </font>
+        </Label>
+        <Label fx:id="detailsLabel" text="File Location:" textAlignment="LEFT" wrapText="true">
+          <font>
+            <Font size="12.0" />
+          </font>
+        </Label>
+            <HBox prefHeight="28.0" prefWidth="400.0">
+               <children>
+                  <Button fx:id="browseVidBtn" mnemonicParsing="false" onAction="#vidUploadBrowseButton" prefHeight="25.0" prefWidth="101.0" text="Browse...">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="videoUploadFP" editable="false" prefHeight="25.0" prefWidth="298.0" style="-fx-background-color: aliceblue;" />
+               </children>
+            </HBox>
+      </children>
+    </VBox>
+    <HBox maxHeight="-Infinity" maxWidth="+Infinity" minHeight="-Infinity" minWidth="-Infinity" GridPane.columnIndex="1" GridPane.rowIndex="1">
+      <children>
+        <HBox fx:id="actionParent" alignment="CENTER">
+          <children>
+                  <TextField fx:id="videoUploadDF" editable="false" prefHeight="25.0" prefWidth="216.0" style="-fx-background-color: aliceblue;">
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font>
+                  </TextField>
+          </children>
+          <HBox.margin>
+            <Insets />
+          </HBox.margin>
+        </HBox>
+        <HBox fx:id="okParent" alignment="CENTER" />
+            <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="30.0" text="File" textFill="#610505">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="videoUploadFN" editable="false" prefHeight="25.0" prefWidth="148.0" promptText="fileName" style="-fx-background-color: aliceblue;">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+      </children>
+    </HBox>
+      <HBox alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="265.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+         <children>
+            <Label fx:id="uploadedVidErrorLable" prefHeight="29.0" prefWidth="226.0" />
+        <Button fx:id="returnUploadVideoBtn" cancelButton="true" minWidth="80.0" mnemonicParsing="false" onAction="#handleButtonAction5" text="Cancel" HBox.hgrow="NEVER">
+          <HBox.margin>
+            <Insets />
+          </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+        </Button>
+      <Button fx:id="okVideoUploadBtn" minWidth="80.0" mnemonicParsing="false" onAction="#videoUploadButton" text="Upload" HBox.hgrow="NEVER">
+        <HBox.margin>
+          <Insets left="14.0" />
+        </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+      </Button>
+         </children>
+      </HBox>
+      <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="59.0" text="Title" GridPane.rowIndex="2">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="59.0" text="Class" GridPane.rowIndex="3">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="uploadVidTitle" promptText="movie or video tile" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <children>
+            <ComboBox fx:id="uploadVidClass" onMouseEntered="#initVideoCategory" prefHeight="25.0" prefWidth="169.0" promptText="select option" />
+            <Label alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="48.0" text="Date" />
+            <DatePicker fx:id="uploadVidDate" />
+         </children>
+      </HBox>
+      <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="76.0" text="Uploaded To" textFill="#610505" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+  </children>
+  <columnConstraints>
+    <ColumnConstraints hgrow="NEVER" maxWidth="-Infinity" minWidth="-Infinity" />
+    <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="Infinity" minWidth="-Infinity" />
+  </columnConstraints>
+  <padding>
+    <Insets bottom="14.0" left="14.0" right="14.0" top="14.0" />
+  </padding>
+  <rowConstraints>
+    <RowConstraints maxHeight="+Infinity" minHeight="-Infinity" valignment="CENTER" vgrow="ALWAYS" />
+    <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="NEVER" />
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+  </rowConstraints>
+</GridPane>
